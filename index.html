@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <h2>Bài tập js buổi 7-8</h2>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="soN"
+        placeholder="Nhập số n"
+      />
+    </div>
+    <button onclick="themSo()" id="themSo" class="btn btn-primary">
+      Thêm số
+    </button>
+
+    <div id="soNhap" class="soDaNhap"></div>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            1.Tổng số dương
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <button onclick="tinhTong()" class="btn btn-primary">
+              Tính tổng
+            </button>
+            <div id="tinhTong"></div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            2.Đếm số dương
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <button onclick="demSo()" class="btn btn-primary">Đếm số</button>
+            <div id="demSo"></div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+            aria-expanded="false"
+            aria-controls="flush-collapseThree"
+          >
+            3.Tìm số nhỏ nhất
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <button onclick="timSoNhoNhat()" class="btn btn-primary">
+              Tìm số nhỏ nhất
+            </button>
+            <div id="timSo"></div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour"
+            aria-expanded="false"
+            aria-controls="flush-collapseFour"
+          >
+            4. Tìm số dương nhỏ nhất
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <button onclick="timSoDuongNhoNhat()" class="btn btn-primary">
+              Tìm số dương nhỏ nhất
+            </button>
+            <div id="timSoDuongNhoNhat"></div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFive">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFive"
+            aria-expanded="false"
+            aria-controls="flush-collapseFive"
+          >
+            5. Tìm số chẵn cuối cùng
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFive"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFive"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <button onclick="timSoChanCuoiCung()" class="btn btn-primary">
+              Tìm số chẵn cuối cùng
+            </button>
+            <div id="timSCCC"></div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSix">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSix"
+            aria-expanded="false"
+            aria-controls="flush-collapseSix"
+          >
+            6. đổi chỗ
+          </button>
+        </h2>
+        <div
+          id="flush-collapseSix"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingSix"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="VT1"
+                placeholder="Nhập vị trí số 1"
+              />
+              <input
+                type="text"
+                class="form-control"
+                id="VT2"
+                placeholder="Nhập vị trí số 2"
+              />
+            </div>
+
+            <button onclick="doiCho()" class="btn btn-primary">Đổi chỗ</button>
+            <div id="doiCho"></div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSeven">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSeven"
+            aria-expanded="false"
+            aria-controls="flush-collapseSeven"
+          >
+            7. sắp xếp tăng dần
+          </button>
+        </h2>
+        <div
+          id="flush-collapseSeven"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingSeven"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <button onclick="sapXepTangDan()" class="btn btn-primary">
+              Sắp xếp
+            </button>
+            <div id="sapXep"></div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingEight">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseEight"
+            aria-expanded="false"
+            aria-controls="flush-collapseEight"
+          >
+            8. Tìm số nguyên tố đầu tiên
+          </button>
+        </h2>
+        <div
+          id="flush-collapseEight"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingEight"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <button onclick="timSoNguyenToDauTien()" class="btn btn-primary">
+              Tìm số nguyên tố
+            </button>
+            <div id="timSNT"></div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingNine">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseNine"
+            aria-expanded="false"
+            aria-controls="flush-collapseNine"
+          >
+            9. đến số nguyên
+          </button>
+        </h2>
+        <div
+          id="flush-collapseNine"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingNine"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="nhapSN"
+                placeholder="Nhập số"
+              />
+            </div>
+
+            <button
+              onclick="themSoNguyen()"
+              id="themSoNguyen"
+              class="btn btn-primary"
+            >
+              Thêm số
+            </button>
+            <div id="soNguyenNhap" class="soNguyenDaNhap"></div>
+
+            <button onclick="demSoNguyen()" class="btn btn-primary">
+              Đếm số
+            </button>
+            <div id="demSoNguyen"></div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTen">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTen"
+            aria-expanded="false"
+            aria-controls="flush-collapseTen"
+          >
+            1.Tổng số dương
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTen"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTen"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <button onclick="tinhTong()" class="btn btn-primary">
+              Tính tổng
+            </button>
+            <div id="tinhTong"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="index.js"></script>
+    <script src="method.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
