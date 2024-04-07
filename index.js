@@ -125,3 +125,21 @@ function demSoNguyen(){
     }
     document.querySelector("#demSoNguyen").innerHTML=tong
 }
+
+function soSanh(){
+    var tong = 0
+    var tru = 0
+    for(var i=0; i <arrList.length;i++){
+        if (arrList[i]>0){
+            tong++
+        }
+        if (arrList[i]<0){
+            tru++
+        }
+    if(tong++ > tru++){
+        document.querySelector("#soSanh").innerHTML = `số dương > số âm`
+    }else{
+        document.querySelector("#soSanh").innerHTML = `số dương < số âm`
+    }
+    }
+}
